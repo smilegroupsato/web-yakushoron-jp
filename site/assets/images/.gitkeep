@@ -1,0 +1,11 @@
+GitHub connector cannot upload binary hero images directly from this chat session.
+
+Upload these two files from the generated ZIP package to this folder:
+
+- hero-desktop-20260521-v2.jpg
+- hero-mobile-20260521-v2.jpg
+
+Source package:
+- web-yakushoron-jp_initial_repo_package_jpg.zip
+
+The CSS already references these exact paths.
