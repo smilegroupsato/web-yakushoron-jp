@@ -1,17 +1,39 @@
-/* Design-board alignment and compact homepage adjustments */
+/* Image-board layout: use generated hero as image, not full-bleed CSS background */
+
+.site-shell {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 0 auto;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0 12px;
+}
+
+.brand-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(35,245,162,0.22);
+}
+
+.brand-link span {
+  margin-left: 12px;
+  color: var(--sub);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
 
 .site-nav {
-  position: absolute;
-  top: 24px;
-  right: clamp(18px, 4vw, 48px);
-  z-index: 2;
   display: flex;
-  gap: clamp(14px, 2.4vw, 30px);
-  padding: 10px 14px;
-  background: rgba(2, 9, 8, 0.42);
-  border: 1px solid rgba(70, 255, 184, 0.22);
-  backdrop-filter: blur(10px);
-  font-size: 0.78rem;
+  gap: clamp(16px, 2.4vw, 30px);
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
 }
 
@@ -21,55 +43,117 @@
 }
 
 .hero {
-  min-height: 82svh;
-  padding: 28px;
+  display: none;
 }
 
-.hero-inner {
-  padding: clamp(42px, 7vw, 78px) 20px;
+.hero-board {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(70, 255, 184, 0.32);
+  box-shadow: 0 24px 86px rgba(0,0,0,0.44);
+  background: #020706;
 }
 
-.site-label {
-  margin-bottom: clamp(36px, 6vw, 64px);
+.hero-board picture,
+.hero-board img {
+  display: block;
+  width: 100%;
 }
 
-.lead {
-  margin-top: clamp(26px, 4vw, 42px);
+.hero-board img {
+  height: auto;
+}
+
+.hero-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 58%, rgba(0,0,0,0.42) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.14), transparent 26%, transparent 74%, rgba(0,0,0,0.18));
+}
+
+.hero-board-statement {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(74%, 760px);
+  text-align: center;
 }
 
 .hero-note {
-  margin-top: clamp(30px, 5vw, 48px);
+  margin: 0 0 22px;
+  display: inline-flex;
+  gap: 0.78em;
+  align-items: center;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.92);
+}
+
+.hero-note::before,
+.hero-note::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(35,245,162,0.82));
+}
+
+.hero-note::after {
+  background: linear-gradient(90deg, rgba(35,245,162,0.82), transparent);
 }
 
 .hero-statement {
-  max-width: 760px;
-  margin: clamp(26px, 4vw, 42px) 0 0;
-  color: rgba(242, 247, 243, 0.9);
-  font-size: clamp(0.92rem, 1.65vw, 1.1rem);
+  margin: 0;
+  color: rgba(242, 247, 243, 0.93);
+  font-size: clamp(0.98rem, 1.6vw, 1.18rem);
   line-height: 1.9;
   letter-spacing: 0.08em;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.96);
 }
 
 .home-wrap {
-  padding-top: clamp(36px, 5.8vw, 64px);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: clamp(32px, 4.8vw, 52px);
   padding-bottom: 54px;
 }
 
 .home-section + .home-section {
-  margin-top: clamp(30px, 4.5vw, 50px);
+  margin-top: clamp(28px, 4.2vw, 46px);
 }
 
-.statement-text {
-  max-width: 760px;
-  font-size: clamp(1.12rem, 2.2vw, 1.58rem);
-  line-height: 1.72;
+.section-head-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-more {
+  color: var(--sub);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.section-kicker {
+  margin-bottom: 16px;
+}
+
+.statement-section {
+  display: none;
 }
 
 .featured-card,
 .essay-card {
   position: relative;
   overflow: hidden;
+  border-color: rgba(70, 255, 184, 0.32);
 }
 
 .featured-card::before,
@@ -80,8 +164,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(3, 7, 6, 0.82), rgba(3, 7, 6, 0.42)),
-    radial-gradient(circle at 78% 40%, rgba(35, 245, 162, 0.18), transparent 18rem);
+    linear-gradient(90deg, rgba(3, 7, 6, 0.84), rgba(3, 7, 6, 0.38)),
+    radial-gradient(circle at 78% 40%, rgba(35, 245, 162, 0.2), transparent 18rem);
   z-index: 0;
 }
 
@@ -93,6 +177,7 @@
 
 .featured-card {
   padding: clamp(24px, 4vw, 40px);
+  max-width: none;
 }
 
 .intro-card {
@@ -102,13 +187,14 @@
 }
 
 .essay-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  max-width: 860px;
+  max-width: none;
 }
 
 .essay-card {
-  min-height: 178px;
+  min-height: 176px;
   padding: 22px;
 }
 
@@ -149,7 +235,7 @@
 }
 
 .card-title {
-  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-size: clamp(1.08rem, 1.9vw, 1.45rem);
 }
 
 .featured-card .card-title {
@@ -163,6 +249,37 @@
 .card-description {
   margin-top: 12px;
   line-height: 1.75;
+}
+
+.axis-pills {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.axis-pills p {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid rgba(70,255,184,0.26);
+  background: rgba(3, 15, 13, 0.58);
+  color: rgba(242, 247, 243, 0.92);
+  text-align: center;
+}
+
+.axis-pills span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(35,245,162,0.55);
+  color: var(--green);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 .axis-list {
@@ -234,37 +351,64 @@
   text-shadow: 0 2px 18px rgba(0,0,0,0.9);
 }
 
+@media (max-width: 900px) {
+  .essay-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .axis-pills {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 720px) {
+  .site-shell {
+    width: min(calc(100% - 20px), 1180px);
+  }
+
+  .board-header {
+    padding-top: 12px;
+  }
+
+  .brand-link {
+    font-size: 1rem;
+  }
+
+  .brand-link span {
+    display: none;
+  }
+
   .site-nav {
-    left: 14px;
-    right: 14px;
-    top: 14px;
-    justify-content: center;
-    gap: 12px;
-    font-size: 0.7rem;
+    gap: 10px;
+    font-size: 0.68rem;
   }
 
-  .hero {
-    min-height: 78svh;
-    padding: 18px;
+  .hero-board-statement {
+    bottom: 6%;
+    width: 86%;
   }
 
-  .hero-inner {
-    padding: 76px 14px 58px;
+  .hero-board .hero-note {
+    margin-bottom: 12px;
+    font-size: 0.68rem;
+  }
+
+  .hero-board .hero-note::before,
+  .hero-board .hero-note::after {
+    width: 28px;
   }
 
   .hero-statement {
-    max-width: 22em;
-    font-size: 0.9rem;
-    line-height: 1.85;
+    font-size: 0.78rem;
+    line-height: 1.7;
   }
 
   .home-wrap {
-    padding-top: 34px;
+    padding-top: 28px;
   }
 
   .home-section + .home-section {
-    margin-top: 32px;
+    margin-top: 30px;
   }
 
   .featured-card,
@@ -272,9 +416,17 @@
     padding: 20px 18px;
   }
 
-  .essay-grid {
+  .essay-grid,
+  .axis-pills {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .axis-pills p {
+    min-height: 72px;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    text-align: left;
   }
 
   .essay-visual {
