@@ -188,6 +188,146 @@ h1 {
   background: linear-gradient(90deg, rgba(35,245,162,0.78), transparent);
 }
 
+.home-wrap {
+  width: min(calc(100% - 40px), 1080px);
+  margin: 0 auto;
+  padding: clamp(64px, 10vw, 112px) 0 72px;
+}
+
+.home-section + .home-section {
+  margin-top: clamp(46px, 7vw, 84px);
+}
+
+.section-kicker,
+.article-kicker {
+  margin: 0 0 22px;
+  color: var(--green);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+}
+
+.statement-section {
+  max-width: var(--max);
+}
+
+.statement-text {
+  margin: 0;
+  color: rgba(255,255,255,0.94);
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+  line-height: 1.85;
+  letter-spacing: 0.08em;
+}
+
+.featured-card,
+.essay-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.92), rgba(3, 10, 9, 0.86)),
+    radial-gradient(circle at 92% 16%, rgba(35,245,162,0.12), transparent 24rem);
+  border: 1px solid var(--line);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 24px 72px rgba(0,0,0,0.35);
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.featured-card:hover,
+.essay-card.is-live:hover {
+  transform: translateY(-2px);
+  border-color: rgba(35,245,162,0.58);
+}
+
+.featured-card {
+  padding: clamp(30px, 5vw, 54px);
+  max-width: var(--max);
+}
+
+.card-index {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--green);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+}
+
+.card-title {
+  display: block;
+  color: white;
+  font-size: clamp(1.35rem, 3vw, 2.25rem);
+  line-height: 1.55;
+  letter-spacing: 0.12em;
+}
+
+.card-subtitle {
+  display: block;
+  margin-top: 16px;
+  color: rgba(242,247,243,0.82);
+  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.08em;
+}
+
+.card-description {
+  display: block;
+  margin-top: 20px;
+  color: var(--sub);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.essay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.essay-card {
+  min-height: 248px;
+  padding: 24px;
+}
+
+.essay-card.is-pending {
+  opacity: 0.58;
+}
+
+.axis-list {
+  display: grid;
+  gap: 14px;
+  max-width: var(--max);
+}
+
+.axis-list p {
+  margin: 0;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(70,255,184,0.16);
+  color: var(--sub);
+  font-size: 0.96rem;
+}
+
+.axis-list span {
+  display: inline-block;
+  min-width: 12em;
+  color: var(--ink);
+}
+
 .article-wrap {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
@@ -215,21 +355,6 @@ h1 {
   border: 1px solid rgba(123,76,255,0.14);
   transform: translate(10px, 10px);
   z-index: -1;
-}
-
-.article-kicker {
-  margin: 0 0 22px;
-  color: var(--green);
-  font-family:
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    "Liberation Mono",
-    monospace;
-  font-size: 0.76rem;
-  letter-spacing: 0.18em;
 }
 
 h2 {
@@ -274,6 +399,48 @@ h2 {
   letter-spacing: 0.04em;
 }
 
+.essay-hero {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+  padding: clamp(42px, 7vw, 76px) 0 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: clamp(42px, 6vw, 72px);
+  color: var(--muted);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+.essay-title {
+  margin: 0;
+  color: white;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.28;
+  letter-spacing: 0.1em;
+}
+
+.essay-subtitle {
+  margin: clamp(24px, 4vw, 36px) 0 0;
+  color: var(--sub);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+
+.essay-wrap {
+  padding-top: clamp(42px, 7vw, 72px);
+}
+
 .site-footer {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
@@ -289,6 +456,12 @@ h2 {
 
 .site-footer p + p {
   margin-top: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .essay-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -325,13 +498,39 @@ h2 {
     letter-spacing: 0.06em;
   }
 
+  .home-wrap,
   .article-wrap,
-  .site-footer {
+  .site-footer,
+  .essay-hero {
     width: min(calc(100% - 28px), var(--max));
   }
 
-  .article {
+  .statement-text {
+    font-size: clamp(1.15rem, 5vw, 1.55rem);
+  }
+
+  .featured-card,
+  .article,
+  .essay-card {
     padding: 26px 20px;
+  }
+
+  .essay-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .essay-card {
+    min-height: 0;
+  }
+
+  .axis-list span {
+    display: block;
+    min-width: 0;
+    margin-bottom: 4px;
+  }
+
+  .essay-title {
+    font-size: clamp(2.25rem, 12vw, 4rem);
   }
 }
 
