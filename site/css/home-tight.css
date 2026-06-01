@@ -1,0 +1,76 @@
+/* Compact homepage adjustments */
+
+.home-wrap {
+  padding-top: clamp(42px, 7vw, 74px);
+  padding-bottom: 56px;
+}
+
+.home-section + .home-section {
+  margin-top: clamp(32px, 5vw, 58px);
+}
+
+.statement-text {
+  max-width: 760px;
+  font-size: clamp(1.12rem, 2.2vw, 1.58rem);
+  line-height: 1.72;
+}
+
+.featured-card {
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.essay-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 860px;
+}
+
+.essay-card {
+  min-height: 188px;
+  padding: 22px;
+}
+
+.card-index {
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+}
+
+.card-subtitle {
+  margin-top: 10px;
+}
+
+.card-description {
+  margin-top: 12px;
+  line-height: 1.75;
+}
+
+.axis-list {
+  gap: 6px;
+}
+
+.axis-list p {
+  padding: 12px 0;
+}
+
+@media (max-width: 720px) {
+  .home-wrap {
+    padding-top: 38px;
+  }
+
+  .home-section + .home-section {
+    margin-top: 34px;
+  }
+
+  .featured-card,
+  .essay-card {
+    padding: 20px 18px;
+  }
+
+  .essay-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
