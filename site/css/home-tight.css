@@ -1,12 +1,63 @@
-/* Compact homepage adjustments */
+/* Design-board alignment and compact homepage adjustments */
+
+.site-nav {
+  position: absolute;
+  top: 24px;
+  right: clamp(18px, 4vw, 48px);
+  z-index: 2;
+  display: flex;
+  gap: clamp(14px, 2.4vw, 30px);
+  padding: 10px 14px;
+  background: rgba(2, 9, 8, 0.42);
+  border: 1px solid rgba(70, 255, 184, 0.22);
+  backdrop-filter: blur(10px);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.site-nav a {
+  color: rgba(242, 247, 243, 0.88);
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 82svh;
+  padding: 28px;
+}
+
+.hero-inner {
+  padding: clamp(42px, 7vw, 78px) 20px;
+}
+
+.site-label {
+  margin-bottom: clamp(36px, 6vw, 64px);
+}
+
+.lead {
+  margin-top: clamp(26px, 4vw, 42px);
+}
+
+.hero-note {
+  margin-top: clamp(30px, 5vw, 48px);
+}
+
+.hero-statement {
+  max-width: 760px;
+  margin: clamp(26px, 4vw, 42px) 0 0;
+  color: rgba(242, 247, 243, 0.9);
+  font-size: clamp(0.92rem, 1.65vw, 1.1rem);
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.96);
+}
 
 .home-wrap {
-  padding-top: clamp(42px, 7vw, 74px);
-  padding-bottom: 56px;
+  padding-top: clamp(36px, 5.8vw, 64px);
+  padding-bottom: 54px;
 }
 
 .home-section + .home-section {
-  margin-top: clamp(32px, 5vw, 58px);
+  margin-top: clamp(30px, 4.5vw, 50px);
 }
 
 .statement-text {
@@ -15,8 +66,39 @@
   line-height: 1.72;
 }
 
+.featured-card,
+.essay-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-card::before,
+.essay-card::before,
+.essay-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(3, 7, 6, 0.82), rgba(3, 7, 6, 0.42)),
+    radial-gradient(circle at 78% 40%, rgba(35, 245, 162, 0.18), transparent 18rem);
+  z-index: 0;
+}
+
+.featured-card > *,
+.essay-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .featured-card {
   padding: clamp(24px, 4vw, 40px);
+}
+
+.intro-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.88), rgba(3, 10, 9, 0.82)),
+    url("../assets/images/hero-desktop-20260521-v2.png") center 58% / cover no-repeat;
 }
 
 .essay-grid {
@@ -26,8 +108,40 @@
 }
 
 .essay-card {
-  min-height: 188px;
+  min-height: 178px;
   padding: 22px;
+}
+
+.yakumei-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.9), rgba(3, 10, 9, 0.84)),
+    radial-gradient(circle at 80% 55%, rgba(73, 229, 255, 0.18), transparent 15rem),
+    radial-gradient(circle at 22% 25%, rgba(35, 245, 162, 0.2), transparent 14rem);
+}
+
+.effort-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.9), rgba(3, 10, 9, 0.84)),
+    radial-gradient(circle at 65% 70%, rgba(226, 185, 94, 0.18), transparent 15rem);
+}
+
+.rescue-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.9), rgba(3, 10, 9, 0.84)),
+    radial-gradient(circle at 78% 50%, rgba(255, 119, 82, 0.18), transparent 15rem);
+}
+
+.city-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.9), rgba(3, 10, 9, 0.84)),
+    radial-gradient(circle at 76% 62%, rgba(123, 76, 255, 0.24), transparent 15rem);
+}
+
+.psycho-card {
+  background:
+    linear-gradient(180deg, rgba(3, 15, 13, 0.9), rgba(3, 10, 9, 0.84)),
+    radial-gradient(circle at 72% 50%, rgba(123, 76, 255, 0.24), transparent 15rem),
+    radial-gradient(circle at 32% 30%, rgba(35, 245, 162, 0.18), transparent 12rem);
 }
 
 .card-index {
@@ -36,6 +150,10 @@
 
 .card-title {
   font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+}
+
+.featured-card .card-title {
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
 }
 
 .card-subtitle {
@@ -55,13 +173,98 @@
   padding: 12px 0;
 }
 
+.essay-visual {
+  width: min(calc(100% - 40px), 1080px);
+  min-height: 46svh;
+  margin: clamp(22px, 4vw, 38px) auto 0;
+  padding: clamp(22px, 4vw, 36px);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  border: 1px solid rgba(70, 255, 184, 0.24);
+  box-shadow: 0 24px 86px rgba(0,0,0,0.38);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.56)),
+    url("../assets/images/hero-desktop-20260521-v2.png") center / cover no-repeat;
+}
+
+.essay-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 52px 52px;
+  opacity: 0.36;
+}
+
+.essay-visual-yakumei {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.58)),
+    url("../assets/images/hero-desktop-20260521-v2.png") center 42% / cover no-repeat;
+}
+
+.essay-visual-inner,
+.essay-visual .back-link {
+  position: relative;
+  z-index: 2;
+}
+
+.essay-visual .back-link {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  margin: 0;
+}
+
+.essay-visual .article-kicker {
+  margin-bottom: 16px;
+}
+
+.essay-title {
+  font-size: clamp(2.4rem, 6.5vw, 5.2rem);
+}
+
+.essay-subtitle {
+  font-size: clamp(1.22rem, 2.7vw, 1.9rem);
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.9);
+}
+
 @media (max-width: 720px) {
+  .site-nav {
+    left: 14px;
+    right: 14px;
+    top: 14px;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.7rem;
+  }
+
+  .hero {
+    min-height: 78svh;
+    padding: 18px;
+  }
+
+  .hero-inner {
+    padding: 76px 14px 58px;
+  }
+
+  .hero-statement {
+    max-width: 22em;
+    font-size: 0.9rem;
+    line-height: 1.85;
+  }
+
   .home-wrap {
-    padding-top: 38px;
+    padding-top: 34px;
   }
 
   .home-section + .home-section {
-    margin-top: 34px;
+    margin-top: 32px;
   }
 
   .featured-card,
@@ -72,5 +275,20 @@
   .essay-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .essay-visual {
+    width: min(calc(100% - 28px), 1080px);
+    min-height: 42svh;
+    padding: 22px 18px;
+  }
+
+  .essay-visual .back-link {
+    top: 16px;
+    left: 18px;
+  }
+
+  .essay-subtitle {
+    font-size: clamp(1.18rem, 5vw, 1.55rem);
   }
 }
