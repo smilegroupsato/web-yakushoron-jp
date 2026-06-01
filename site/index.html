@@ -26,18 +26,24 @@
 <body>
   <div class="page">
     <header class="hero">
+      <nav class="site-nav" aria-label="サイト内ナビゲーション">
+        <a href="./pages/introduction.html">Introduction</a>
+        <a href="#essays">Essays</a>
+        <a href="#axes">Research Axes</a>
+      </nav>
       <div class="hero-inner">
         <p class="site-label">yakushoron.jp</p>
         <h1>薬象論</h1>
         <p class="lead">薬は、治療物質である以前に、<br>未知の力の名である。</p>
         <p class="hero-note">introduction</p>
+        <p class="hero-statement">薬を単なる治療物質としてではなく、名前・身体・欲望・都市・弱い救済の像として考える試み。</p>
       </div>
     </header>
 
     <main class="home-wrap">
-      <section class="home-section featured-section">
+      <section class="home-section featured-section" id="introduction">
         <p class="section-kicker">First Text</p>
-        <a class="featured-card" href="./pages/introduction.html">
+        <a class="featured-card intro-card" href="./pages/introduction.html">
           <span class="card-index">Introduction</span>
           <span class="card-title">薬象論序説</span>
           <span class="card-subtitle">薬は、治療物質である以前に、未知の力の名である</span>
@@ -45,35 +51,30 @@
         </a>
       </section>
 
-      <section class="home-section statement-section">
-        <p class="section-kicker">Statement</p>
-        <p class="statement-text">薬象論は、薬を単なる治療物質としてではなく、名前、身体、欲望、都市、そして弱い救済の像として考える試みである。</p>
-      </section>
-
-      <section class="home-section essays-section">
+      <section class="home-section essays-section" id="essays">
         <p class="section-kicker">Essays</p>
         <div class="essay-grid">
-          <a class="essay-card is-live" href="./pages/yakumei-no-jocho.html">
+          <a class="essay-card is-live yakumei-card" href="./pages/yakumei-no-jocho.html">
             <span class="card-index">Essay 001</span>
             <span class="card-title">薬名は、意味以前に情緒を帯びる</span>
             <span class="card-description">デパス、マイスリー、コンサータ。薬名は、効能や作用機序として理解される前に、身体へ届く。</span>
           </a>
-          <article class="essay-card is-pending">
+          <article class="essay-card is-pending effort-card">
             <span class="card-index">Next</span>
             <span class="card-title">努力では届かないところ</span>
             <span class="card-description">薬は、努力では変えられない領域へ介入する。</span>
           </article>
-          <article class="essay-card is-pending">
+          <article class="essay-card is-pending rescue-card">
             <span class="card-index">Next</span>
             <span class="card-title">弱い救済</span>
             <span class="card-description">薬は、人生を救わない。だが今日を通過させることがある。</span>
           </article>
-          <article class="essay-card is-pending">
+          <article class="essay-card is-pending city-card">
             <span class="card-index">Next</span>
             <span class="card-title">都市身体</span>
             <span class="card-description">都市の中で、身体は比較され、整えられ、更新を迫られる。</span>
           </article>
-          <article class="essay-card is-pending">
+          <article class="essay-card is-pending psycho-card">
             <span class="card-index">Next</span>
             <span class="card-title">精神変容物質</span>
             <span class="card-description">薬は、治療だけでなく、知覚・気分・自己感覚を変えるものとして現れる。</span>
@@ -81,7 +82,7 @@
         </div>
       </section>
 
-      <section class="home-section axes-section">
+      <section class="home-section axes-section" id="axes">
         <p class="section-kicker">Research Axes</p>
         <div class="axis-list">
           <p><span>01｜薬名</span>効能より先に身体へ届く音。</p>
