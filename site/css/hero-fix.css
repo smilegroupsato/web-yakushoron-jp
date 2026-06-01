@@ -1,0 +1,18 @@
+/* Hero image path fix
+   The actual committed hero files are PNG, not JPG.
+   This stylesheet is loaded after style.css and overrides only hero image URLs. */
+
+.hero {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.46)),
+    url("../assets/images/hero-desktop-20260521-v2.png") center / cover no-repeat;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.42)),
+      url("../assets/images/hero-mobile-20260521-v2.png") center / cover no-repeat,
+      linear-gradient(180deg, #020403 0%, #04110d 100%);
+  }
+}
