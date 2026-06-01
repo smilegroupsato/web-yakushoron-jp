@@ -70,8 +70,51 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 58%, rgba(0,0,0,0.42) 100%),
-    linear-gradient(90deg, rgba(0,0,0,0.14), transparent 26%, transparent 74%, rgba(0,0,0,0.18));
+    radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.14) 62%, rgba(0,0,0,0.46) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.16), transparent 26%, transparent 74%, rgba(0,0,0,0.18));
+}
+
+.hero-board-title {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(78%, 820px);
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero-domain {
+  margin: 0 0 clamp(18px, 3vw, 34px);
+  color: rgba(242, 247, 243, 0.78);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(0.68rem, 1.2vw, 0.9rem);
+  letter-spacing: 0.24em;
+  text-transform: lowercase;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.92);
+}
+
+.hero-board-title h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(3.7rem, 9.4vw, 7.2rem);
+  font-weight: 500;
+  letter-spacing: clamp(0.12em, 1.8vw, 0.18em);
+  line-height: 1.02;
+  text-shadow:
+    0 0 28px rgba(35,245,162,0.26),
+    0 0 58px rgba(73,229,255,0.14),
+    0 3px 24px rgba(0,0,0,0.95);
+}
+
+.hero-board-title > p:last-child {
+  margin: clamp(24px, 4vw, 42px) 0 0;
+  color: rgba(255,255,255,0.94);
+  font-size: clamp(1rem, 2vw, 1.42rem);
+  line-height: 1.85;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.96);
 }
 
 .hero-board-statement {
@@ -381,6 +424,28 @@
   .site-nav {
     gap: 10px;
     font-size: 0.68rem;
+  }
+
+  .hero-board-title {
+    top: 12%;
+    width: 88%;
+  }
+
+  .hero-domain {
+    margin-bottom: 18px;
+    font-size: 0.66rem;
+  }
+
+  .hero-board-title h1 {
+    font-size: clamp(3.6rem, 18vw, 5.8rem);
+    letter-spacing: 0.1em;
+  }
+
+  .hero-board-title > p:last-child {
+    margin-top: 22px;
+    font-size: clamp(1.02rem, 4.4vw, 1.35rem);
+    line-height: 1.8;
+    letter-spacing: 0.06em;
   }
 
   .hero-board-statement {
