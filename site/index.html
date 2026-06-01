@@ -24,21 +24,26 @@
 </head>
 
 <body>
-  <div class="page">
-    <header class="hero">
+  <div class="page site-shell">
+    <header class="board-header">
+      <a class="brand-link" href="./index.html">薬象論 <span>yakushoron.jp</span></a>
       <nav class="site-nav" aria-label="サイト内ナビゲーション">
         <a href="./pages/introduction.html">Introduction</a>
         <a href="#essays">Essays</a>
         <a href="#axes">Research Axes</a>
       </nav>
-      <div class="hero-inner">
-        <p class="site-label">yakushoron.jp</p>
-        <h1>薬象論</h1>
-        <p class="lead">薬は、治療物質である以前に、<br>未知の力の名である。</p>
+    </header>
+
+    <section class="hero-board" aria-label="薬象論キービジュアル">
+      <picture>
+        <source media="(max-width: 720px)" srcset="./assets/images/hero-mobile-20260521-v2.png">
+        <img src="./assets/images/hero-desktop-20260521-v2.png" alt="薬象論。薬は、治療物質である以前に、未知の力の名である。">
+      </picture>
+      <div class="hero-board-statement">
         <p class="hero-note">introduction</p>
         <p class="hero-statement">薬を単なる治療物質としてではなく、名前・身体・欲望・都市・弱い救済の像として考える試み。</p>
       </div>
-    </header>
+    </section>
 
     <main class="home-wrap">
       <section class="home-section featured-section" id="introduction">
@@ -52,7 +57,10 @@
       </section>
 
       <section class="home-section essays-section" id="essays">
-        <p class="section-kicker">Essays</p>
+        <div class="section-head-row">
+          <p class="section-kicker">Essays</p>
+          <a class="section-more" href="./pages/yakumei-no-jocho.html">最初の論考を読む →</a>
+        </div>
         <div class="essay-grid">
           <a class="essay-card is-live yakumei-card" href="./pages/yakumei-no-jocho.html">
             <span class="card-index">Essay 001</span>
@@ -84,6 +92,13 @@
 
       <section class="home-section axes-section" id="axes">
         <p class="section-kicker">Research Axes</p>
+        <div class="axis-pills">
+          <p><span>01</span>薬名</p>
+          <p><span>02</span>身体</p>
+          <p><span>03</span>欲望</p>
+          <p><span>04</span>都市</p>
+          <p><span>05</span>弱い救済</p>
+        </div>
         <div class="axis-list">
           <p><span>01｜薬名</span>効能より先に身体へ届く音。</p>
           <p><span>02｜身体</span>治療、補綴、改造、自己演出の場。</p>
