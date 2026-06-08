@@ -1,0 +1,49 @@
+/* Essay page: 努力の果て */
+.essay-visual-doryoku{
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.62)),
+    url('../assets/images/doryoku-no-hate-hero.jpg'),
+    url('../assets/images/essay-doryoku-clean.png');
+  background-position:center center, center center, center center;
+  background-size:cover, cover, cover;
+}
+.essay-visual-doryoku::before{
+  background:
+    linear-gradient(90deg,rgba(3,7,8,.88),rgba(3,7,8,.42) 44%,rgba(3,7,8,.18)),
+    radial-gradient(circle at 72% 44%,rgba(143,82,255,.20),transparent 42%);
+}
+.body-copy h2{
+  margin:2.25em 0 1em;
+  color:#f5f4ee;
+  font-size:clamp(1.35rem,2.6vw,1.9rem);
+  line-height:1.5;
+  letter-spacing:.07em;
+}
+.body-copy h2:first-child{margin-top:0}
+.body-copy .line-list{
+  margin:0 0 1.45em;
+  padding-left:0;
+  list-style:none;
+}
+.body-copy .line-list li{
+  margin:.28em 0;
+  font-size:1.05rem;
+  line-height:2.02;
+}
+.body-copy .short-lines p{
+  margin-bottom:.35em;
+}
+.article-note{
+  max-width:880px;
+  margin:34px auto 0;
+  padding:18px 20px;
+  border:1px solid rgba(70,255,184,.22);
+  background:rgba(2,9,10,.52);
+  color:#dce8e1;
+  font-size:.94rem;
+  line-height:1.85;
+}
+.article-note p{margin:.35em 0}
+@media (max-width:900px){
+  .essay-visual-doryoku{background-position:center center, 62% center, center center}
+}
