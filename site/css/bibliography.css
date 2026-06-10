@@ -1,0 +1,58 @@
+/* Bibliography page */
+.bibliography-page{
+  --accent:#ff4fd8;
+  --line:rgba(255,79,216,.32);
+  --line-strong:rgba(64,178,255,.52);
+}
+.bibliography-visual{
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.62)),
+    url('../assets/images/bibliography-hero.jpg'),
+    linear-gradient(135deg,#050712,#17001e 48%,#001b35);
+  background-position:center center;
+  background-size:cover;
+}
+.bibliography-visual::before{
+  background:
+    linear-gradient(90deg,rgba(2,4,10,.88),rgba(2,4,10,.46) 46%,rgba(2,4,10,.16)),
+    radial-gradient(circle at 70% 42%,rgba(255,79,216,.18),transparent 36%),
+    radial-gradient(circle at 20% 75%,rgba(64,178,255,.18),transparent 34%);
+}
+.bibliography-visual .article-kicker{color:#ff65dc}
+.bibliography-visual .essay-title{text-shadow:0 0 28px rgba(255,79,216,.28),0 0 56px rgba(64,178,255,.18),0 4px 28px rgba(0,0,0,.95)}
+.bibliography-wrap{max-width:1080px}
+.bibliography-intro{
+  padding:clamp(22px,3.5vw,36px);
+  border-color:rgba(255,79,216,.22);
+  background:
+    linear-gradient(180deg,rgba(10,8,18,.78),rgba(3,8,16,.62)),
+    radial-gradient(circle at 82% 18%,rgba(64,178,255,.12),transparent 30%),
+    radial-gradient(circle at 16% 72%,rgba(255,79,216,.14),transparent 28%);
+}
+.bibliography-intro p{max-width:880px;margin:0 auto 1em;font-size:1.02rem;line-height:2}.bibliography-intro p:last-child{margin-bottom:0}.bibliography-note{color:#dfe8ffcc}
+.bibliography-section{margin-top:clamp(28px,4vw,48px)}
+.bibliography-section h2{
+  margin:0 0 16px;
+  color:#fff;
+  font-size:clamp(1.35rem,2.8vw,2rem);
+  line-height:1.45;
+  letter-spacing:.07em;
+  text-shadow:0 0 22px rgba(255,79,216,.14);
+}
+.section-lead{margin:0 0 16px;color:#dfe8ffcc;line-height:1.9}
+.reference-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.reference-card{
+  padding:clamp(18px,2.6vw,26px);
+  border:1px solid rgba(255,79,216,.20);
+  background:
+    linear-gradient(180deg,rgba(6,12,22,.72),rgba(5,7,16,.82)),
+    radial-gradient(circle at 92% 10%,rgba(64,178,255,.10),transparent 28%);
+  box-shadow:0 16px 48px rgba(0,0,0,.32);
+}
+.reference-card h3{margin:0 0 12px;font-size:clamp(1.02rem,1.8vw,1.22rem);line-height:1.65;letter-spacing:.02em;color:#fff}
+.reference-card cite{font-style:italic;color:#f8e6ff}.reference-card p{margin:.65em 0 0;color:#edf3ffdd;line-height:1.9}.reference-card strong{color:#ff8ee8;font-weight:600}
+.web-link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.web-link-card{display:flex;flex-direction:column;gap:4px;min-height:108px;padding:16px;border:1px solid rgba(64,178,255,.24);background:linear-gradient(180deg,rgba(5,13,24,.72),rgba(8,5,18,.76));box-shadow:0 12px 36px rgba(0,0,0,.28)}.web-link-card strong{color:#fff;font-size:1rem;line-height:1.45}.web-link-card span{color:#dce9ffcc;font-size:.88rem;line-height:1.6}
+.bibliography-page .article-meta{border-color:rgba(255,79,216,.24);background:rgba(8,6,18,.56)}
+@media (max-width:900px){
+  .bibliography-visual{background-position:58% center;min-height:360px}.bibliography-visual .essay-title{font-size:clamp(2.9rem,14vw,4.8rem)}.web-link-grid{grid-template-columns:1fr}.reference-card{padding:18px 15px}.bibliography-section h2{font-size:1.35rem}
+}
