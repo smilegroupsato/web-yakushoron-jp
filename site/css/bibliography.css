@@ -29,30 +29,33 @@
     radial-gradient(circle at 82% 18%,rgba(64,178,255,.12),transparent 30%),
     radial-gradient(circle at 16% 72%,rgba(255,79,216,.14),transparent 28%);
 }
-.bibliography-intro p{max-width:880px;margin:0 auto 1em;font-size:1.02rem;line-height:2}.bibliography-intro p:last-child{margin-bottom:0}.bibliography-note{color:#dfe8ffcc}
-.bibliography-section{margin-top:clamp(28px,4vw,48px)}
+.bibliography-intro p{max-width:880px;margin:0 auto;font-size:1.03rem;line-height:2.05;color:#edf3ffdd}
+.bibliography-section{margin-top:clamp(34px,5vw,58px)}
 .bibliography-section h2{
-  margin:0 0 16px;
+  margin:0 0 18px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(255,79,216,.22);
   color:#fff;
   font-size:clamp(1.35rem,2.8vw,2rem);
   line-height:1.45;
   letter-spacing:.07em;
   text-shadow:0 0 22px rgba(255,79,216,.14);
 }
-.section-lead{margin:0 0 16px;color:#dfe8ffcc;line-height:1.9}
-.reference-grid{display:grid;grid-template-columns:1fr;gap:14px}
-.reference-card{
-  padding:clamp(18px,2.6vw,26px);
-  border:1px solid rgba(255,79,216,.20);
+.section-lead{margin:0 0 18px;color:#dfe8ffcc;line-height:1.95;font-size:1rem}
+.reference-list{display:grid;grid-template-columns:1fr;gap:16px}
+.reference-block{
+  padding:clamp(19px,2.8vw,28px);
+  border:1px solid rgba(255,79,216,.18);
   background:
-    linear-gradient(180deg,rgba(6,12,22,.72),rgba(5,7,16,.82)),
+    linear-gradient(180deg,rgba(6,12,22,.72),rgba(5,7,16,.84)),
     radial-gradient(circle at 92% 10%,rgba(64,178,255,.10),transparent 28%);
-  box-shadow:0 16px 48px rgba(0,0,0,.32);
+  box-shadow:0 16px 48px rgba(0,0,0,.30);
 }
-.reference-card h3{margin:0 0 12px;font-size:clamp(1.02rem,1.8vw,1.22rem);line-height:1.65;letter-spacing:.02em;color:#fff}
-.reference-card cite{font-style:italic;color:#f8e6ff}.reference-card p{margin:.65em 0 0;color:#edf3ffdd;line-height:1.9}.reference-card strong{color:#ff8ee8;font-weight:600}
-.web-link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.web-link-card{display:flex;flex-direction:column;gap:4px;min-height:108px;padding:16px;border:1px solid rgba(64,178,255,.24);background:linear-gradient(180deg,rgba(5,13,24,.72),rgba(8,5,18,.76));box-shadow:0 12px 36px rgba(0,0,0,.28)}.web-link-card strong{color:#fff;font-size:1rem;line-height:1.45}.web-link-card span{color:#dce9ffcc;font-size:.88rem;line-height:1.6}
-.bibliography-page .article-meta{border-color:rgba(255,79,216,.24);background:rgba(8,6,18,.56)}
+.reference-block h3{margin:0 0 13px;font-size:clamp(1.04rem,1.8vw,1.24rem);line-height:1.68;letter-spacing:.02em;color:#fff;font-weight:600}
+.reference-block cite{font-style:italic;color:#f8e6ff}.reference-block p{margin:.68em 0 0;color:#edf3ffdd;line-height:1.95;font-size:1rem}.reference-block strong{color:#ff8ee8;font-weight:600}.reference-block a,.web-resource-section a{color:#9ed6ff;text-decoration:underline;text-decoration-color:rgba(158,214,255,.42);text-underline-offset:.18em}
+.web-resource-section{border:1px solid rgba(64,178,255,.18);background:rgba(5,10,20,.28);padding:clamp(20px,3vw,30px)}
+.web-resource-group{margin-top:22px}.web-resource-group:first-of-type{margin-top:14px}.web-resource-group h3{margin:0 0 10px;color:#f8e6ff;font-size:1.08rem;line-height:1.5;letter-spacing:.04em}.web-resource-group ul{margin:0;padding-left:1.25em}.web-resource-group li{margin:.65em 0;color:#edf3ffdd;line-height:1.9}
+.bibliography-meta{border-color:rgba(255,79,216,.24)!important;background:rgba(8,6,18,.56)!important}.bibliography-meta p{margin:.35em 0!important}
 @media (max-width:900px){
-  .bibliography-visual{background-position:58% center;min-height:360px}.bibliography-visual .essay-title{font-size:clamp(2.9rem,14vw,4.8rem)}.web-link-grid{grid-template-columns:1fr}.reference-card{padding:18px 15px}.bibliography-section h2{font-size:1.35rem}
+  .bibliography-visual{background-position:58% center;min-height:360px}.bibliography-visual .essay-title{font-size:clamp(2.9rem,14vw,4.8rem)}.bibliography-section{margin-top:34px}.reference-block{padding:18px 15px}.bibliography-section h2{font-size:1.35rem}.web-resource-section{padding:18px 15px}.web-resource-group ul{padding-left:1.15em}
 }
